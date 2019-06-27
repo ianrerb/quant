@@ -1,0 +1,54 @@
+
+# python
+click
+dill
+lazy
+mypy
+six
+toolz
+
+# pydata
+bottleneck
+cython
+keras
+numpy
+pandas==0.24.2
+scikit-learn
+scipy==1.2.0
+tensorflow
+xarray==0.12.1
+
+# dev tools
+asv
+autopep8
+black
+flake8
+ipdb
+ipython
+isort
+jedi
+jupyter
+jupyter_kernel_gateway
+line_profiler
+memory_profiler
+mockredispy
+notebook
+pdbpp
+profilehooks
+pycallgraph
+pycodestyle
+pydocstyle
+pyinstrument
+pytest
+pytest-pycharm
+pytest-regtest
+pytest-sugar
+pytest-testmon
+pytest-watch
+pytest-xdist
+python-language-server
+snakeviz
+tqdm
+
+# viz
+matplotlib

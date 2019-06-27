@@ -1,5 +1,8 @@
 *.pyc
+*.pptx
 *.ipynb
 data/*
 *.csv
 quant_case_data/*
+
+

@@ -1,0 +1,26 @@
+version: "2.2"
+services:
+  base:
+    build:
+      context: .
+
+  dev:
+    extends: base
+    volumes:
+      - ./:/src:cached
+      - ~/.ipython:/root/.ipython
+    working_dir: /src
+
+  jupyter:
+    extends: dev
+    command: [jupyter-notebook]
+    volumes:
+      - ./:/notebooks
+      - ~/.jupyter/custom:/root/.jupyter/custom
+    ports:
+      - 8888:8888
+    init: True
+
+  test:
+    extends: dev
+    entrypoint: pytest
