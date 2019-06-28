@@ -6,6 +6,8 @@ from core.market_data import MarketData
 from core.risk_model import RiskModel, read_risk_data
 
 ALPHA_DIR = "data/alpha"
+SPAN=1000
+MIN_PERIODS=252
 
 
 def rank_signal(raw, shift=1):
@@ -44,7 +46,7 @@ def run_strat(name):
     returns = (conf[0]() * MarketData().total_return).sum(axis=1)
     decay = conf[1]
 
-    w = returns.ewm(span=252, min_periods=252)
+    w = returns.ewm(span=SPAN, min_periods=MIN_PERIODS)
     sharpe = (w.mean() / w.std()).shift(2).clip_lower(0)
     horizon_alpha = sharpe * 1.0 / (1.0 - decay) / (1.0 - sharpe * decay)
 
