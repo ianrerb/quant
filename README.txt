@@ -6,8 +6,3 @@ Some exploratory work / analysis for presentation was done in ipython notebooks.
 
 docker-compose up jupyter
 
-Deliverables:
-1.  csv file: quant/final_portfolio.csv
-Note: the weights are taken to be the day the trades are put on (port construction runs after market close)
-2.  Presentation: quant/pres.pptx
-
