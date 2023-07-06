@@ -14,7 +14,7 @@ keras
 numpy
 pandas==0.24.2
 scikit-learn
-scipy==1.2.0
+scipy==1.10.0
 tensorflow
 xarray==0.12.1
 
